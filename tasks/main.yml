@@ -1,0 +1,5 @@
+---
+- name: Install php-fpm
+  yum: name=php-fpm state=present
+  when: ansible_os_family == "RedHat"
+  tags: [packages,php-fpm]
